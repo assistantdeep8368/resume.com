@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Deepanshu Singh - Resume</title>
+
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/6f4f082dd5.js" crossorigin="anonymous"></script>
+
+    <!-- html2pdf.js for PDF download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fa;
+            padding: 30px;
+            color: #333;
+        }
+
+        .download-btn {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+        }
+
+        .download-btn button {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .download-btn button:hover {
+            background-color: #005fa3;
+        }
+
+        .resume {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header img {
+            width: 120px;
+            height: 160px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 30px;
+            border: 3px solid #0077cc;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            color: #0077cc;
+        }
+
+        .header p {
+            margin: 4px 0;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .info i {
+            margin-right: 6px;
+            color: #0077cc;
+        }
+
+        .info a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: #005599;
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .education-item h3 {
+            color: #0077cc;
+        }
+
+        .signature {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header img {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Download Button -->
+    <div class="download-btn">
+        <button onclick="downloadPDF()">Download as PDF</button>
+    </div>
+
+    <!-- Resume Content -->
+    <div class="resume" id="resumeContent">
+        <div class="header">
+            <img src="resume_photo_600x800.jpg" alt="Deepanshu Singh">
+            <div>
+                <h1>Deepanshu Singh</h1>
+                <p>Frontend Developer (Beginner)</p>
+                <p class="info">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:deepanshusingh8478@gmail.com">deepanshusingh8478@gmail.com</a> |
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+918368960244">+91-8368960244</a>
+                </p>
+                <p class="info">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/assistantdeep8368" target="_blank">github.com/assistantdeep8368</a> |
+                    <i class="fas fa-map-marker-alt"></i>New Delhi, India
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Objective</h2>
+            <p>
+                To pursue a challenging career as a Frontend Developer in a growth-oriented
+                organization, where I can apply my technical knowledge, creative problem-solving,
+                and eagerness to learn new technologies to deliver user-friendly and visually appealing
+                web applications.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>HTML5 & Semantic Tags</li>
+                <li>CSS3 (Flexbox, Grid, Responsive Design)</li>
+                <li>Basic JAVA</li>
+                <li>Python</li>
+                <li>Version Control using Git & GitHub</li>
+                <li>TailwindCSS4</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Portfolio:</strong> Created using HTML and CSS to showcase projects, resume, and contact
+                    info.
+                    <br>🔗 <a href="https://assistantdeep8368.github.io/Portfolio.com/" target="_blank">Live Project</a>
+                </li>
+
+                <li>
+                    <strong>Myntra Clone:</strong> A responsive e-commerce website UI built using HTML and CSS.
+                    <br>🔗 <a href="https://assistantdeep8368.github.io/Myntra.com/" target="_blank">Live Project</a>
+                </li>
+
+                <li>
+                    <strong>Google UI Clone:</strong> A simple replica of the Google homepage created using
+                    TailwindCSS4.
+                    <br>🔗 <a href="https://assistantdeep8368.github.io/GoogleUIClone.com/" target="_blank">Live
+                        Project</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>B.Tech in Computer Science Engineering</h3>
+                <p><strong>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</strong></p>
+                <p>2022 - 2025 | Accurate Institute of Management and Technology, Noida</p>
+            </div>
+            <div class="education-item">
+                <h3>Diploma in Civil Engineering</h3>
+                <p><strong>Board of Technical Education (BTE)</strong></p>
+                <p>2020 - 2022 | Chhotu Ram Rural Institute of Technology, Delhi</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Quick learner of web technologies and frameworks</li>
+                <li>Strong analytical and logical thinking</li>
+                <li>Clear understanding of data hierarchy and structure</li>
+                <li>Good communication and team collaboration skills</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Personal Details</h2>
+            <ul>
+                <li>Date of Birth: 01/07/2002</li>
+                <li>Father's Name: Mr. Akhilesh Singh</li>
+                <li>Languages Known: English, Hindi</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Declaration</h2>
+            <p>
+                I hereby declare that the information given above is true and correct to the best of my knowledge.
+            </p>
+            <div class="signature">
+                <p>Date: 03/07/2025</p>
+                <p>Place: Delhi</p>
+                <p>Signature: <strong>Deepanshu Singh</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for PDF Download -->
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('resumeContent');
+            const opt = {
+                margin: 0,
+                filename: 'Deepanshu_Singh_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+</body>
+
+</html>
